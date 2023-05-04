@@ -11,17 +11,12 @@ from rdfreader.chem.mol import Molecule
 
 @pytest.fixture
 def mocker(mocker_fixture) -> MockerFixture:  # noqa: F811
-    """
-    Wraps pytest_mock.mocker fixture to allow for
-    easier importing.
-    """
+    """Wraps pytest_mock.mocker fixture to allow for easier importing."""
     return mocker_fixture
 
 
 def get_sample_mol_block() -> str:
-    """
-    Load the sample mol block as a string from the test resources.
-    """
+    """Load the sample mol block as a string from the test resources."""
     sample_mol_block_path = "test/resources/sample_mol_block.txt"
     with open(sample_mol_block_path, "r") as f:
         sample_mol_block = f.read()
@@ -29,9 +24,7 @@ def get_sample_mol_block() -> str:
 
 
 def get_rdf_path() -> Path:
-    """
-    Load the sample rdf as a string from the test resources.
-    """
+    """Load the sample rdf as a string from the test resources."""
     rdf_path = Path("test/resources/sample_rdf.rdf")
     return rdf_path
 
@@ -43,18 +36,14 @@ def rdf_path() -> Path:
 
 @pytest.fixture
 def first_sample_rxn() -> str:
-    """
-    Return the first rxn block from the sample rdf.
-    """
+    """Return the first rxn block from the sample rdf."""
     with open("test/resources/sample_rdf_first_rxn.rxn", "r") as f:
         first_sample_rxn = f.read()
     return first_sample_rxn
 
 
 def get_sample_rdf_string() -> str:
-    """
-    Load the sample rdf as a string from the test resources.
-    """
+    """Load the sample rdf as a string from the test resources."""
     sample_rdf_string_path = get_rdf_path()
     with open(sample_rdf_string_path, "r") as f:
         sample_rdf_string = f.read()
@@ -62,9 +51,7 @@ def get_sample_rdf_string() -> str:
 
 
 def get_sample_rxn_block() -> str:
-    """
-    Load the sample rxn block as a string from the test resources.
-    """
+    """Load the sample rxn block as a string from the test resources."""
     sample_rxn_block_path = "test/resources/sample_rxn_block.txt"
     with open(sample_rxn_block_path, "r") as f:
         sample_rxn_block = f.read()
@@ -78,9 +65,7 @@ def sample_mol_block() -> str:
 
 @pytest.fixture
 def sample_mol_block_lines() -> str:
-    """
-    Return the sample mol block split into a list of lines.
-    """
+    """Return the sample mol block split into a list of lines."""
     return get_sample_mol_block().split("\n")
 
 
@@ -91,17 +76,13 @@ def sample_rxn_block() -> str:
 
 @pytest.fixture
 def sample_rxn_block_lines() -> str:
-    """
-    Return the sample rxn block split into a list of lines.
-    """
+    """Return the sample rxn block split into a list of lines."""
     return get_sample_rxn_block().split("\n")
 
 
 @pytest.fixture
 def sample_molecule() -> Molecule:
-    """
-    Create a test molecule.
-    """
+    """Create a test molecule."""
     mol = Molecule()
     mol.mol_block = get_sample_mol_block()
     return mol
@@ -109,9 +90,7 @@ def sample_molecule() -> Molecule:
 
 @pytest.fixture
 def sample_molecule_metadata() -> dict[str, Any]:
-    """
-    Return the sample mol block metadata.
-    """
+    """Return the sample mol block metadata."""
     return dict(
         molecule_name="sample name",
         user_initials="II",
@@ -128,9 +107,7 @@ def sample_molecule_metadata() -> dict[str, Any]:
 
 @pytest.fixture
 def sample_rxn_block_metadata() -> str:
-    """
-    Return sample rxn block metadata.
-    """
+    """Return sample rxn block metadata."""
     return dict(
         reaction_name="sample reaction name",
         user_initials="IIIIII",

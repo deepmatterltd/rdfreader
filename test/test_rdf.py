@@ -19,7 +19,6 @@ def test_parse_rdf_reg_num():
 
 
 def test_parse_rdf(sample_rdf_file: str):
-
     with open(sample_rdf_file, "r") as f:
         rdf_parser = RDFParser(f)
         reactions = [reaction for reaction in rdf_parser]
@@ -64,7 +63,6 @@ def reaction_raise_exception(mocker: MockerFixture) -> MagicMock:
 
 
 def test_parse_rdf_catches(reaction_raise_exception: MagicMock, sample_rdf_file: str):
-
     with open(sample_rdf_file, "r") as f:
         rdf_parser = RDFParser(f, except_on_invalid_reaction=False)
         reactions = [reaction for reaction in rdf_parser]
@@ -74,7 +72,6 @@ def test_parse_rdf_catches(reaction_raise_exception: MagicMock, sample_rdf_file:
 
 
 def test_parse_rdf_raises(reaction_raise_exception: MagicMock, sample_rdf_file: str):
-
     with pytest.raises(InvalidReactionError):
         with open(sample_rdf_file, "r") as f:
             rdf_parser = RDFParser(f)

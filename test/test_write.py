@@ -4,7 +4,6 @@ from rdfreader.write import write_rdf
 
 
 def test_write_rdf(first_sample_rxn):
-
     with NamedTemporaryFile("w+", suffix="rdf") as f:
         rxn_blocks = [first_sample_rxn] * 3
 

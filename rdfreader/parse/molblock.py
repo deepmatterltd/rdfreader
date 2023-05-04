@@ -17,8 +17,7 @@ def get_mol_block_metadata(
     header_format_string: str = CTF_DEFAULT_MOLBLOCK_HEADER_FORMAT_STRING,
     header_field_mapping: dict[str, tuple[str, Callable, Any]] = CTF_DEFAULT_LETTER_TO_FIELD_MAPPING,
 ) -> dict[str, Any]:
-    """
-    Extract metadata from a mol block string.
+    """Extract metadata from a mol block string.
 
     Parameters
     ----------
@@ -60,9 +59,8 @@ def get_mol_block_metadata(
 
 
 def _parse_large_regno(mol_block_lines: list[str]) -> str:
-    """
-    Searches the molblock a line beginning with M REG and returns the value of
-    it if present.
+    """Searches the molblock a line beginning with M REG and returns the value
+    of it if present.
 
     Parameters
     ----------

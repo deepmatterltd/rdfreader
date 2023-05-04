@@ -23,11 +23,11 @@ class Reaction:
         lineno: Optional[int] = None,
         rdf_file: Optional[str] = None,
     ):
-        """
-        Create a reaction object.
+        """Create a reaction object.
 
-        If a reaction block is provided, the reaction will be initialized with
-        that, otherwise the reaction will be initialized empty.
+        If a reaction block is provided, the reaction will be
+        initialized with that, otherwise the reaction will be
+        initialized empty.
         """
 
         self.rxn_block = rxn_block
@@ -59,8 +59,7 @@ class Reaction:
         header_format_string: str = CTF_RXNBLOCK_HEADER_FORMAT_STRING,
         except_on_invalid_molecule: bool = True,
     ) -> None:
-        """
-        Initialize the reaction object from a reaction block.
+        """Initialize the reaction object from a reaction block.
 
         Parameters
         ----------
@@ -137,8 +136,7 @@ class Reaction:
 
     @property
     def reagents(self) -> list[Molecule]:
-        """
-        Return a single list of all reagents.
+        """Return a single list of all reagents.
 
         Returns
         -------

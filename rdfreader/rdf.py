@@ -11,7 +11,6 @@ def parse_rdf_reg_num(line: str):
 
 
 class RDFParser:
-
     _header_retrieved: bool = False
     lineno: int = 1
     rdf_metadata: dict[str, str] = {}
@@ -55,8 +54,7 @@ class RDFParser:
         return self.next_reaction()
 
     def next_reaction(self):
-        """
-        Returns the next rxn block from a rdf file.
+        """Returns the next rxn block from a rdf file.
 
         Parameters
         ----------
@@ -91,8 +89,7 @@ class RDFParser:
         return reaction
 
     def _header(self):
-        """
-        Parse the header of a RDF file.
+        """Parse the header of a RDF file.
 
         Parameters
         ----------
@@ -113,8 +110,7 @@ class RDFParser:
             self.rdf_metadata = {"version": version, "date_stamp": date_stamp}
 
     def _next_rxn_block(self) -> tuple[str, str, int]:
-        """
-        Returns the next rxn block from a rdf file. If the end
+        """Returns the next rxn block from a rdf file. If the end.
 
         Returns
         -------
@@ -153,8 +149,6 @@ class RDFParser:
         return rxn_block, reg_no, start_lineno
 
     def _readline(self):
-        """
-        Wraps f.read and increments the line number.
-        """
+        """Wraps f.read and increments the line number."""
         self.lineno += 1
         return self.f.readline()
