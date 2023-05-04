@@ -1,0 +1,38 @@
+name: Publish to PyPI Test
+
+on:
+  release:
+    types: [published]
+
+# TODO:
+  # update pypi token to live server
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        ref: ${{ github.ref }}  # this is the tag of the release
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2
+        with:
+          poetry-version: "1.4.2"
+
+      - name: Set Project Version
+        run: |
+          export VERSION=$(echo ${{ github.ref }} | sed -e 's/refs\/tags\/v//' -e 's/\//-/g')
+          poetry version $VERSION
+
+      - name: Publish to PYPI
+        # poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          poetry config repositories.test-pypi https://test.pypi.org/legacy/
+          poetry config pypi-token.test-pypi ${{ secrets.TEST_PYPI_API_TOKEN }}
+          poetry publish --build -r test-pypi

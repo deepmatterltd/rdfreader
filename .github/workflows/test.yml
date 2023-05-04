@@ -1,0 +1,32 @@
+name: Testing
+
+on: [push]
+
+# TODO: create a new action that combines the python/poetry setup and install across both jobs
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+        poetry-version: ["1.3", "1.4"]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip" # cache the poetry installation - would be better to cache poetry install of deps but this doesn't seem to work here.
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+      - name: Install dependencies
+        run: |
+          poetry install --sync
+      - name: Test with pytest
+        run: |
+          poetry run pytest

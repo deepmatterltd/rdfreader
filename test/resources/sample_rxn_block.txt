@@ -1,0 +1,208 @@
+$RXN
+sample reaction name
+IIIIIIPPPPPPPPP052420221455RRRRRRR
+sample reaction comment
+  3  1
+$MOL
+sample mol name
+  INFOCHEM          2D 1   1.00000     0.00000     0
+sample comment
+ 20 22  0  0  0  0  0  0  0  0999 V2000
+  -17.9211    9.9975    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0
+   -5.3998  -11.6409    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0
+  -30.4032  -11.6409    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0
+  -39.5203   22.4405    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0
+    3.6390   22.4405    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0
+   15.8081  -24.9056    0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0
+  -39.4812   47.4048    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0
+    3.6781   47.4048    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0
+   16.6690  -49.9090    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   30.5206  -17.1189    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  -17.9211   59.8478    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0
+   38.6595  -61.5695    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4607  -63.1346    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -17.0602   84.8512    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0
+   39.5203  -86.5729    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5999  -88.0989    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -24.3382   99.8376    0.0000 C   0  0  0  0  0  0  0  0  0 17  0  0
+   -0.9000   80.8209    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0
+  -33.4553   81.9948    0.0000 C   0  0  0  0  0  0  0  0  0 19  0  0
+   18.3906  -99.8376    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  4
+  1  4  1  0  0  0  8
+  1  5  1  0  0  0  0
+  2  3  1  0  0  0  8
+  2  6  1  0  0  0  4
+  4  7  1  0  0  0  0
+  5  8  1  0  0  0  0
+  6  9  1  0  0  0  0
+  6 10  2  0  0  0  0
+  7 11  1  0  0  0  0
+  8 11  1  0  0  0  0
+  9 12  2  0  0  0  0
+  9 13  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 12 15  1  0  0  0  0
+ 13 16  2  0  0  0  0
+ 14 17  1  0  0  0  0
+ 14 18  1  0  0  0  0
+ 14 19  1  0  0  0  0
+ 15 20  2  0  0  0  0
+ 16 20  1  0  0  0  0
+M  END
+$MOL
+
+  INFOCHEM          2D 1   1.00000     0.00000     0
+
+  6  4  0  0  0  0  0  0  0  0999 V2000
+   -0.0294   42.8121    0.0000 Li  0  3  0  0  0  0  0  0  0  0  0  0
+   -0.0294  -17.9022    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1494  -42.8121    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -9.7461    5.1233    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   24.8216  -20.9644    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  -24.8216  -20.9644    0.0000 O   0  5  0  0  0  0  0  0  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  2  0  0  0  0
+  2  5  2  0  0  0  0
+  2  6  1  0  0  0  0
+M  END
+$MOL
+
+  INFOCHEM          2D 1   1.00000     0.00000     0
+
+ 14 13  0  0  0  0  0  0  0  0999 V2000
+   -5.3935   -5.5303    0.0000 P   0  0  0  0  0  0  0  0  0  0  0  0
+   18.0956  -14.0896    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -22.0821   13.0343    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -27.0457  -17.9979    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.3773    7.9144    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   24.1145  -38.3213    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -16.0242   37.2660    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -28.8045  -42.9331    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   47.6036  -46.8805    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -32.7128   55.8306    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -50.4567  -55.4007    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   51.6292  -63.0220    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -28.6872   71.9721    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -51.6292  -71.9721    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  1  5  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  7  1  0  0  0  0
+  4  8  1  0  0  0  0
+  6  9  1  0  0  0  0
+  7 10  1  0  0  0  0
+  8 11  1  0  0  0  0
+  9 12  1  0  0  0  0
+ 10 13  1  0  0  0  0
+ 11 14  1  0  0  0  0
+M  END
+$MOL
+
+  INFOCHEM          2D 1   1.00000     0.00000     0
+
+ 12 12  0  0  0  0  0  0  0  0999 V2000
+    0.0000   27.5877    0.0000 C   0  0  0  0  0  0  0  0  0  1  0  0
+   21.6481   15.0834    0.0000 C   0  0  0  0  0  0  0  0  0  4  0  0
+  -21.6481   15.0443    0.0000 C   0  0  0  0  0  0  0  0  0  5  0  0
+    0.8597   52.5573    0.0000 C   0  0  0  0  0  0  0  0  0  2  0  0
+   21.6481   -9.8862    0.0000 C   0  0  0  0  0  0  0  0  0  7  0  0
+  -21.6481   -9.9253    0.0000 C   0  0  0  0  0  0  0  0  0  8  0  0
+  -12.5825   62.3263    0.0000 O   0  0  0  0  0  0  0  0  0  3  0  0
+    0.0000  -22.4297    0.0000 C   0  0  0  0  0  0  0  0  0 11  0  0
+   -0.8987  -47.3993    0.0000 C   0  0  0  0  0  0  0  0  0 14  0  0
+    6.3694  -62.3263    0.0000 C   0  0  0  0  0  0  0  0  0 17  0  0
+  -17.0372  -43.3744    0.0000 C   0  0  0  0  0  0  0  0  0 18  0  0
+   15.4741  -44.5467    0.0000 C   0  0  0  0  0  0  0  0  0 19  0  0
+  1  2  2  0  0  0  8
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  3  6  1  0  0  0  0
+  4  7  2  0  0  0  8
+  5  8  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+  9 12  1  0  0  0  0
+M  END
+$DTYPE RXN:VARIATION:STEPNO:CATALYST(1):MOL:MOLSTRUCTURE
+$DATUM $MFMT
+
+  REACCS80          2D 1   1.00000     0.00000     0
+
+ 13 12  0  0  0  0  0  0  0  0999 V2000
+    9.8099  -10.9824    0.0000 P   0  0  0  0  0  0  0  0  0  0  0  0
+   33.2991  -19.5417    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7911   13.2884    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -8.1684  -28.3355    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   39.3179  -43.7734    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   20.5188   31.8530    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -32.5956  -23.1374    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   62.8070  -52.3327    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   14.4999   56.1238    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -50.5739  -40.4904    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   66.8326  -68.4741    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   25.6387   68.4741    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -66.8326  -37.0511    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  2
+  1  3  1  0  0  0  2
+  1  4  1  0  0  0  2
+  2  5  1  0  0  0  2
+  3  6  1  0  0  0  2
+  4  7  1  0  0  0  2
+  5  8  1  0  0  0  2
+  6  9  1  0  0  0  2
+  7 10  1  0  0  0  2
+  8 11  1  0  0  0  2
+  9 12  1  0  0  0  2
+ 10 13  1  0  0  0  2
+M  END
+$DTYPE RXN:VARIATION:STEPNO:CATALYST(1):MOL:SYMBOL
+$DATUM tributylphosphine
+$DTYPE RXN:VARIATION:RXNTYPE_ID
+$DATUM 8
+$DTYPE RXN:VARIATION:RXNTYPE_TOTDOC
+$DATUM 1
+$DTYPE RXN:VARIATION:RXNTYPE_TOTEXA
+$DATUM 9
+$DTYPE RXN:VARIATION:RXNTYPE_EXADOC
+$DATUM 7
+$DTYPE RXN:VARIATION:ICRREF:EXTREG
+$DATUM 1274842
+$DTYPE RXN:VARIATION:ICRREF:DOCNO
+$DATUM 22X0078 87
+$DTYPE RXN:VARIATION:STEPNO:RXNTEXT
+$DATUM TRIBUTYLPHOSPHINE OXIDE, 110 DEGREES CELSIUS 50 MIN
+$DTYPE RXN:VARIATION:PRODUCT:YIELD
+$DATUM 98.0-98.0
+$DTYPE RXN:VARIATION:LITREF:TYPE
+$DATUM JOURNAL
+$DTYPE RXN:VARIATION:LITREF:TITLE
+$DATUM 'ALPHA','BETA'-EPOXY SULFOXIDES AS USEFUL INTERMEDIATES IN ORGANIC SYNTHE+
+SIS. X. AN IMPROVED SYNTHESIS OF 'ALPHA','BETA'-UNSATURATED CARBONYL COMPOUNDSFR+
+OM CARBONYL COMPOUNDS WITH CARBON HOMOLOGATION THROUGH 'ALPHA','BETA'-EPOXY SULF+
+OXIDES
+$DTYPE RXN:VARIATION:LITREF:AUTHOR
+$DATUM SATOH TSUYOSHI; ITOH MASAYUKI; OHARA TERUHIKO; YAMAKAWA KOJI
+$DTYPE RXN:VARIATION:LITREF:JOURNAL_CODEN
+$DATUM BCSJA8
+$DTYPE RXN:VARIATION:LITREF:JOURNAL_JRNL
+$DATUM BULL. CHEM. SOC. JPN.
+$DTYPE RXN:VARIATION:LITREF:JOURNAL_YEAR
+$DATUM 1987
+$DTYPE RXN:VARIATION:LITREF:JOURNAL_VOL.
+$DATUM 60
+$DTYPE RXN:VARIATION:LITREF:JOURNAL_NO.
+$DATUM 5
+$DTYPE RXN:VARIATION:LITREF:JOURNAL_PG.
+$DATUM 1839
+$DTYPE RXN:VARIATION:LITREF:LANGUAGE
+$DATUM ENG
+$DTYPE RXN:VARIATION:LITREF:FULL_CITATION
+$DATUM SATOH TSUYOSHI; ITOH MASAYUKI; OHARA TERUHIKO; YAMAKAWA KOJI, BULL. CHEM.+
+ SOC. JPN., 1987, VOL. 60, P. 1839
