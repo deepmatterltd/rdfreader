@@ -2,8 +2,7 @@ from rdfreader.chem.mol import Molecule
 
 
 def mol_list_to_smiles(mol_list: list[Molecule]) -> str:
-    """
-    Convert a list of molecules to a SMILES string.
+    """Convert a list of molecules to a SMILES string.
 
     Parameters
     ----------
@@ -24,10 +23,8 @@ def reaction_smiles(
     products: list[Molecule],
     reagents: list[Molecule] = [],
 ) -> str:
-    """
-    Create a reaction smiles string from lists of product, reactant, and
-    reagent molecules.
-    """
+    """Create a reaction smiles string from lists of product, reactant, and
+    reagent molecules."""
 
     product_smiles = mol_list_to_smiles(products)
     reactant_smiles = mol_list_to_smiles(reactants)

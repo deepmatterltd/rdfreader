@@ -7,8 +7,7 @@ def write_rdf(
     rxn_blocks: list[str],
     rxn_ids: list[str] = None,
 ):
-    """
-    Write a RDF file from a list of reaction blocks.
+    """Write a RDF file from a list of reaction blocks.
 
     Parameters
     ----------

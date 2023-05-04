@@ -6,10 +6,8 @@ def test_parse_large_regno():
 
 
 def test_get_mol_block_metadata(sample_mol_block, sample_molecule_metadata):
-    """
-    Components of this function are tested seperately, only need to test the
-    once for integration.
-    """
+    """Components of this function are tested seperately, only need to test the
+    once for integration."""
     expected_result = sample_molecule_metadata
     test_result = get_mol_block_metadata(sample_mol_block)
 

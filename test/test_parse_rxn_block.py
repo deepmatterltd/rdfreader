@@ -41,10 +41,8 @@ def empty_datum_parser():
 
 
 def test_get_rxn_block_metadata(sample_rxn_block, sample_rxn_block_metadata):
-    """
-    Test that the get_rxn_block_metadata function correctly parses the
-    sample rxn block metadata.
-    """
+    """Test that the get_rxn_block_metadata function correctly parses the
+    sample rxn block metadata."""
     assert sample_rxn_block_metadata == get_rxn_block_metadata(sample_rxn_block)
 
 
@@ -62,9 +60,7 @@ def test_parse_dtype_string(sample_dtype_string, expected_dtype_string):
 
 
 def test_datum_parser_rxnblock(sample_rxn_block):
-    """
-    Test that the DatumParser parses the sample rxn block.
-    """
+    """Test that the DatumParser parses the sample rxn block."""
     datum_parser = DatumParser(sample_rxn_block)
 
     for parsed_dtype, datum in datum_parser:
@@ -91,26 +87,20 @@ def test_preprocess_datum_string(expected_datum_string, sample_datum_string):
 
 
 def test_validate_rxn_block(sample_rxn_block):
-    """
-    Test that the validate_rxn_block function correctly validates the sample
-    rxn block.
-    """
+    """Test that the validate_rxn_block function correctly validates the sample
+    rxn block."""
     assert validate_rxn_block(sample_rxn_block)
 
 
 def test_validate_rxn_block_invalid():
-    """
-    Test that the validate_rxn_block function correctly validates the sample
-    rxn block.
-    """
+    """Test that the validate_rxn_block function correctly validates the sample
+    rxn block."""
     assert not validate_rxn_block("invalid rxn block")
 
 
 def test_mol_blocks_from_rxn_block(sample_rxn_block):
-    """
-    Test that the mol_blocks_from_rxn_block function correctly parses the
-    sample rxn block.
-    """
+    """Test that the mol_blocks_from_rxn_block function correctly parses the
+    sample rxn block."""
     reactant_count: int = 3
     product_count: int = 1
 

@@ -35,9 +35,7 @@ CTF_DEFAULT_LETTER_TO_FIELD_MAPPING: dict[str, tuple[str, Callable, Any]] = {
 
 
 def _default_line_item(cast_type: Callable = str, default: Any = None) -> Any:
-    """
-    Return a default value for a line item.
-    """
+    """Return a default value for a line item."""
     if default is not None:
         return default
 
@@ -56,8 +54,7 @@ def get_line_item(
     default: Any = None,
     catch_casting_exceptions: bool = False,
 ) -> Any:
-    """
-    Process a line from an rdf/mol file or block.
+    """Process a line from an rdf/mol file or block.
 
     If character_index is provided, then the characters within that slice will
     be returned.
@@ -107,8 +104,7 @@ def get_line_item(
 
 
 def get_whole_line_item(line: str) -> str:
-    """
-    Return a data item that is from a whole line. Item must be a string
+    """Return a data item that is from a whole line. Item must be a string.
 
     Parameters
     ----------
@@ -119,14 +115,12 @@ def get_whole_line_item(line: str) -> str:
     -------
     str
         The data item.
-
     """
     return get_line_item(line, (0, len(line)), str, "")
 
 
 def parse_format_string(format_string) -> dict[str, tuple]:
-    """
-    Parses a CTF format string (http://c4.cabrillo.edu/404/ctfile.pdf) and
+    """Parses a CTF format string (http://c4.cabrillo.edu/404/ctfile.pdf) and
     returns a dictionary where the key is the letter in the format string and
     the value is a tuple of the start and end character index.
 
@@ -166,8 +160,7 @@ def dict_elements_to_datetime(
     delete_initial_keys: bool = True,
     catch_datetime_exceptions: bool = True,
 ) -> dict[str, Any]:
-    """
-    Search a dictionary for datetime elements and adds a a new key to the
+    """Search a dictionary for datetime elements and adds a a new key to the
     dictionary with a datetime object.
 
     Searches for datetime keys called: "hour", "minute", "second", "day",
@@ -223,8 +216,7 @@ def _parse_block_header_line(
     header_format_string: str,
     header_field_mapping: dict[str, tuple[str, Callable, Any]],
 ) -> dict[str, Any]:
-    """
-    Parse the header line of a rxn or mol block.
+    """Parse the header line of a rxn or mol block.
 
     Parameters
     ----------
@@ -264,9 +256,8 @@ def _parse_block_header_line(
 
 
 def make_string_python_safe(string: str) -> str:
-    """
-    Remove/replace characters that are not allowed in python variable/function
-    names.
+    """Remove/replace characters that are not allowed in python
+    variable/function names.
 
     Parameters
     ----------
@@ -309,8 +300,7 @@ def make_string_python_safe(string: str) -> str:
 
 
 def parse_yield(yield_string: str) -> float:
-    """
-    Attempts to parse the yield string into a float.
+    """Attempts to parse the yield string into a float.
 
     If muliple numbers are detected, will return the average.
 

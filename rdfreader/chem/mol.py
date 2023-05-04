@@ -14,8 +14,7 @@ class Molecule:
         except_on_invalid_molecule: bool = True,
         component_type: str = None,
     ):
-        """
-        Create a molecule object.
+        """Create a molecule object.
 
         If a mol_block is provided, the molecule will be initialized with that,
         otherwise the molecule will be initialized empty.
@@ -35,8 +34,7 @@ class Molecule:
 
     @property
     def mol_block(self) -> str:
-        """
-        Returns the mol block string of the molecule.
+        """Returns the mol block string of the molecule.
 
         Returns
         -------
@@ -47,8 +45,7 @@ class Molecule:
 
     @mol_block.setter
     def mol_block(self, mol_block: str):
-        """
-        Set the mol block string of the molecule.
+        """Set the mol block string of the molecule.
 
         Parameters
         ----------
@@ -62,17 +59,14 @@ class Molecule:
 
     @property
     def rd_mol(self) -> Mol:
-        """
-        Return the RDKit molecule object.
-        """
+        """Return the RDKit molecule object."""
         return MolFromMolBlock(
             self.mol_block,
         )
 
     @property
     def smiles(self) -> str:
-        """
-        Returns the SMILES string of the molecule using RDKit.
+        """Returns the SMILES string of the molecule using RDKit.
 
         Returns:
             str: SMILES string of the molecule.
@@ -84,8 +78,7 @@ class Molecule:
 
     @property
     def metadata(self) -> dict[str, Any]:
-        """
-        Returns the metadata of the molecule from the mol block string.
+        """Returns the metadata of the molecule from the mol block string.
 
         Returns:
             dict[str, Any]: The metadata of the molecule.
@@ -93,8 +86,7 @@ class Molecule:
         return get_mol_block_metadata(self.mol_block)
 
     def _from_mol_block(self, mol_block: str, properties: dict[str, Any] = dict()) -> None:
-        """
-        Initialize the molecule object with a mol block string.
+        """Initialize the molecule object with a mol block string.
 
         Parameters
         ----------
@@ -112,8 +104,7 @@ class Molecule:
 
     @classmethod
     def from_mol_block(cls, mol_block: str, properties: dict[str, Any] = {}) -> "Molecule":
-        """
-        Create a Molecule object from a mol block string.
+        """Create a Molecule object from a mol block string.
 
         Parameters
         ----------
@@ -131,8 +122,7 @@ class Molecule:
         return mol
 
     def __eq__(self, __o: object) -> bool:
-        """
-        Returns True if the molecules are equal.
+        """Returns True if the molecules are equal.
 
         Returns
         -------
@@ -144,8 +134,7 @@ class Molecule:
         return self.mol_block == __o.mol_block
 
     def __str__(self) -> str:
-        """
-        Returns the smiles string of the molecule.
+        """Returns the smiles string of the molecule.
 
         Returns
         -------
@@ -155,13 +144,11 @@ class Molecule:
         return self.smiles
 
     def __repr__(self) -> str:
-
         return f"Molecule(smiles={self.smiles})"
 
     @classmethod
     def from_smiles(cls, smiles: str) -> "Molecule":
-        """
-        Create a Molecule object from a smiles string.
+        """Create a Molecule object from a smiles string.
 
         Parameters
         ----------

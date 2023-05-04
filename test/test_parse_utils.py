@@ -42,9 +42,7 @@ def test_default_line_item_floa_non_default():
 
 
 def test_default_line_item_other():
-    """
-    Test that None is returned when not using string, int, or float.
-    """
+    """Test that None is returned when not using string, int, or float."""
     assert _default_line_item(list, None) is None
 
 
@@ -102,7 +100,6 @@ def test_get_line_item_casting_exceptions_caught():
 
 
 def test_parse_format_string():
-
     format_string = "IIIIIIPPPPPPPPPMMDDYYYYHHmmRRRRRRR"
 
     expected_result = {
@@ -120,9 +117,8 @@ def test_parse_format_string():
 
 
 def test_dict_elements_to_datetime():
-    """
-    Test that a dictionary of elements can be converted to a datetime object.
-    """
+    """Test that a dictionary of elements can be converted to a datetime
+    object."""
     elements = {
         "month": 1,
         "day": 2,
@@ -147,7 +143,6 @@ def test_dict_elements_to_datetime():
 
 
 def test_parse_block_header_line_with_molblock(sample_mol_block_lines, sample_molecule_metadata):
-
     expected_result = sample_molecule_metadata
     expected_result["registry_number"] = "RRRRRR"
     # This is the only thing that is different from the
@@ -165,7 +160,6 @@ def test_parse_block_header_line_with_molblock(sample_mol_block_lines, sample_mo
 
 
 def test_parse_block_header_line_with_molblock_defaults():
-
     expected_result = dict(
         user_initials="",
         program_name="",
@@ -206,7 +200,6 @@ def test_parse_block_header_line_with_rxnblock(sample_rxn_block_lines, sample_rx
 
 
 def test_parse_block_header_line_with_rxnblock_defaults():
-
     expected_result = dict(
         user_initials="",
         program_name="",
@@ -224,9 +217,7 @@ def test_parse_block_header_line_with_rxnblock_defaults():
 
 
 def test_get_whole_line_item():
-    """
-    Test that a line item can be retrieved from a line.
-    """
+    """Test that a line item can be retrieved from a line."""
     line = "line      \n"
     assert get_whole_line_item(line) == "line"
 
@@ -245,7 +236,6 @@ def test_make_string_python_safe(test_string, expected_result):
 
 
 def test_parse_yield():
-
     test_strings = [
         "17.0-17.0",
         "17",
@@ -269,9 +259,7 @@ def test_parse_yield():
 
 
 def test_parse_yield_none():
-    """
-    Test that None is returned if the yield cannot be parsed.
-    """
+    """Test that None is returned if the yield cannot be parsed."""
     test_strings = ["some text", "-1"]
 
     for test_string in test_strings:

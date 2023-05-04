@@ -22,8 +22,7 @@ def get_rxn_block_metadata(
     header_field_mapping: dict[str, tuple[str, Callable, Any]] = CTF_DEFAULT_LETTER_TO_FIELD_MAPPING,
     reactant_product_count_format_string: str = CTF_COMPONENT_COUNT_FORMAT_STRING,  # noqa F401
 ) -> dict[str, Any]:
-    """
-    Get the metadata from a reaction block.
+    """Get the metadata from a reaction block.
 
     Parameters
     ----------
@@ -53,8 +52,7 @@ def get_rxn_block_metadata(
 
 
 class DatumParser:
-    """
-    Process dtype/datum pairs.
+    """Process dtype/datum pairs.
 
     The class processes the dtype string into a callable method name and then
     calls that method with the datum string to process the data.
@@ -72,10 +70,8 @@ class DatumParser:
         self.except_on_invalid_molecule = except_on_invalid_molecule
 
     def __iter__(self) -> Iterator[tuple[Any, int, str]]:
-        """
-        Iterate over the lines in the reaction block, identifying dtype/datum
-        pairs and returning them as a tuple.
-        """
+        """Iterate over the lines in the reaction block, identifying
+        dtype/datum pairs and returning them as a tuple."""
 
         dtype_string_identifier = "$DTYPE "
 
@@ -101,14 +97,11 @@ class DatumParser:
                 yield self.parse_datum(dtype_string, datum_string)
 
     def __call__(self, *args, **kwargs):
-        """
-        Wraps parse_datum method.
-        """
+        """Wraps parse_datum method."""
         return self.parse_datum(*args, **kwargs)
 
     def parse_datum(self, dtype: str, datum: str) -> tuple[str, str | Molecule]:
-        """
-        Process the $DATUM datum.
+        """Process the $DATUM datum.
 
         Parameters
         ----------
@@ -152,14 +145,13 @@ def detect_molblock_from_datum(datum: str) -> bool:
 
 
 def preprocess_datum_molblock(datum: str) -> str:
-    """Strips the datum down to just the molblock"""
+    """Strips the datum down to just the molblock."""
 
     return "\n".join(datum.splitlines()[1:])  # remove the $MFMT line
 
 
 def preprocess_datum_string(datum: str) -> str:
-    """
-    Preprocess the datum string.
+    """Preprocess the datum string.
 
     Parameters
     ----------
@@ -177,8 +169,7 @@ def preprocess_datum_string(datum: str) -> str:
 
 
 def parse_dtype_string(dtype_string: str) -> str:
-    """
-    Parse a $dtype line from a reaction block.
+    """Parse a $dtype line from a reaction block.
 
     Returns the contents of the dtype line, with the prefix "$DTYPE " removed.
 
@@ -199,8 +190,7 @@ def parse_dtype_string(dtype_string: str) -> str:
 
 
 def validate_rxn_block(rxn_block: str) -> bool:
-    """
-    Validates a rxn block.
+    """Validates a rxn block.
 
     Parameters
     ----------
@@ -220,8 +210,7 @@ def validate_rxn_block(rxn_block: str) -> bool:
 
 
 def mol_blocks_from_rxn_block(rxn_block: str, reactant_count: int, product_count: int) -> tuple[list[str], list[str]]:
-    """
-    Get the mol blocks corresponding to reactants and products from the rxn
+    """Get the mol blocks corresponding to reactants and products from the rxn
     block.
 
     Params
