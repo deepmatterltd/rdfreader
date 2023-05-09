@@ -132,6 +132,8 @@ class DatumParser:
             datum = Molecule(
                 mol_block=datum, component_type=reagent_type, except_on_invalid_molecule=self.except_on_invalid_molecule
             )
+        else:
+            datum = datum.strip()
 
         return parsed_dtype, datum
 
