@@ -49,10 +49,10 @@ def test_get_rxn_block_metadata(sample_rxn_block, sample_rxn_block_metadata):
 @pytest.mark.parametrize(
     "sample_dtype_string, expected_dtype_string",
     [
-        ("$DTYPE RXN:VARIATION:STEPNO:SOLVENT(1):MOL:SYMBOL", "RXN:VARIATION:STEPNO:SOLVENT(1):MOL:SYMBOL"),
-        ("$DTYPE RXN:VARIATION:PRODUCT:YIELD", "RXN:VARIATION:PRODUCT:YIELD"),
-        ("$DTYPE RXN:CLASSIFICATION(1):MEDIUM", "RXN:CLASSIFICATION(1):MEDIUM"),
-        ("$DTYPE RXN:VARIATION:LITREF:JOURNAL_ISSN", "RXN:VARIATION:LITREF:JOURNAL_ISSN"),
+        ("$DTYPE RXN:VARIATION:STEPNO:SOLVENT(1):MOL:SYMBOL", "rxn_variation_stepno_solvent_1__mol_symbol"),
+        ("$DTYPE RXN:VARIATION:PRODUCT:YIELD", "rxn_variation_product_yield"),
+        ("$DTYPE RXN:CLASSIFICATION(1):MEDIUM", "rxn_classification_1__medium"),
+        ("$DTYPE RXN:VARIATION:LITREF:JOURNAL_ISSN", "rxn_variation_litref_journal_issn"),
     ],
 )
 def test_parse_dtype_string(sample_dtype_string, expected_dtype_string):

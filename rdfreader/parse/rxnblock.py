@@ -12,6 +12,8 @@ from rdfreader.parse.utils import (
     _parse_block_header_line,
     get_whole_line_item,
 )
+from rdfreader.parse.utils import make_string_python_safe
+
 
 logger = logging.getLogger(__name__)
 
@@ -188,6 +190,7 @@ def parse_dtype_string(dtype_string: str) -> str:
 
     dtype_string = dtype_string.strip()  # Remove leading and trailing whitespace.
     dtype_string = dtype_string.replace("$DTYPE ", "")  # Remove the $dtype tag.
+    dtype_string = make_string_python_safe(dtype_string)
     return dtype_string
 
 
