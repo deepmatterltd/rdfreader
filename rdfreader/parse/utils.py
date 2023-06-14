@@ -238,7 +238,6 @@ def _parse_block_header_line(
 
     metadata = {}
     for letter, character_index in format_string_dict.items():
-
         if letter in header_field_mapping:
             field_name = header_field_mapping[letter][0]
             data_type = header_field_mapping[letter][1]
