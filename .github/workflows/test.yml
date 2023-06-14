@@ -15,15 +15,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+      - name: "Setup Python, Poetry and Dependencies"
+        uses: packetcoders/action-setup-cache-python-poetry@main
         with:
-          python-version: ${{ matrix.python-version }}
-          cache: "pip" # cache the poetry installation - would be better to cache poetry install of deps but this doesn't seem to work here.
-      - name: Install Poetry
-        uses: abatilo/actions-poetry@v2
-        with:
-          poetry-version: ${{ matrix.poetry-version }}
+          python-version: ${{matrix.python-version}}
+          poetry-version: ${{matrix.poetry-version}}
       - name: Install dependencies
         run: |
           poetry install --sync
