@@ -66,8 +66,10 @@ Before you commit changes, ensure these pass the hooks installed by pre-commit. 
 Releases are managed by GitHub releases/workflow. The version number in the pyproject file should ideally be kept up to date to the current release but is ignored by the release workflow.
 
 To release a new version:
-- Push the changes to GitHub.
-- Use the github website to create a release. Tag the commit to be released with a version number, e.g. v1.2.3. The tag should be in v*.*.* format and be compatible with version numbering in poetry/pypi (the version number will be taken from the tag with the leading "v" stripped).
+
+- Update the pyproject.toml version number.
+- Push the changes to GitHub and merge to main via a pull request.
+- Use the github website to create a release. Tag the commit to be released with a version number, e.g. v1.2.3. The tag should be in v*.*.* and match the version number in the pyproject.toml file.
 - When the release is published, a github workflow will run, build a wheel and publish it to PyPI.
 
 ### Example Data

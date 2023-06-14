@@ -11,9 +11,8 @@ from rdfreader.parse.utils import (
     CTF_RXNBLOCK_HEADER_FORMAT_STRING,
     _parse_block_header_line,
     get_whole_line_item,
+    make_string_python_safe,
 )
-from rdfreader.parse.utils import make_string_python_safe
-
 
 logger = logging.getLogger(__name__)
 
