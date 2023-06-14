@@ -1,5 +1,8 @@
 # RDF READER
 
+[![Coverage Status](https://coveralls.io/repos/github/deepmatterltd/rdfreader/badge.svg)](https://coveralls.io/github/deepmatterltd/rdfreader)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/deepmatterltd/rdfreader/main.svg)](https://results.pre-commit.ci/latest/github/deepmatterltd/rdfreader/main)
+
 ## User Guide
 
 ### Installation
