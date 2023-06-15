@@ -1,9 +1,13 @@
 [tool.poetry]
 name = "rdfreader"
-# The version is currently managed by the github release workflow (see README), don't use.
 version = "1.0.0"  
 description = "Read the full contents of CTAB .rdf files in python. Captures RXN and MOL record using RDKit and reads additional data fields (including solvents/catalysts/agents)."
 authors = ["deepmatter <enquiries@deepmatter.io>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/deepmatterltd/rdfreader/"
+homepage = "https://www.deepmatter.io"
+
 
 [tool.poetry.dependencies]
 python = "^3.9"
