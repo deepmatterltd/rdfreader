@@ -12,34 +12,6 @@ from rdfreader.parse.rxnblock import (
 )
 
 
-def get_sample_datum_mol_block_processed():
-    file_path = "test/resources/sample_datum_mol_block_processed.txt"
-    with open(file_path, "r") as f:
-        mol_block = f.read()
-    return mol_block
-
-
-@pytest.fixture
-def sample_datum_mol_block():
-    file_path = "test/resources/sample_datum_mol_block.txt"
-    with open(file_path, "r") as f:
-        mol_block = f.read()
-    return mol_block
-
-
-@pytest.fixture
-def sample_datum_mol_block_parsed():
-    file_path = "test/resources/sample_datum_mol_block_parsed.txt"
-    with open(file_path, "r") as f:
-        mol_block = f.read()
-    return mol_block
-
-
-@pytest.fixture
-def empty_datum_parser():
-    return
-
-
 def test_get_rxn_block_metadata(sample_rxn_block, sample_rxn_block_metadata):
     """Test that the get_rxn_block_metadata function correctly parses the
     sample rxn block metadata."""
