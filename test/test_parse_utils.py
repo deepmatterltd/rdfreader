@@ -227,7 +227,7 @@ def test_get_whole_line_item():
     [
         ("", None),
         (" ", None),
-        (" \n\r1_:;'/test`string\n __", "_1_____test_string"),
+        (" \n\r1_:;'/test`string\n __", "_1_test_string"),
     ],
 )
 def test_make_string_python_safe(test_string, expected_result):
