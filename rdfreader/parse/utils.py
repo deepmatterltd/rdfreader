@@ -289,6 +289,9 @@ def make_string_python_safe(string: str) -> str:
     # replace all non-alphanumeric characters with an underscore
     string = re.sub(r"[^a-zA-Z0-9_]", "_", string)
 
+    # replace multiple underscores with a single underscore
+    string = re.sub(r"_{2,}", "_", string)
+
     # lower case the string
     string = string.lower()
 
