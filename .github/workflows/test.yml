@@ -28,8 +28,3 @@ jobs:
       - name: Test with pytest
         run: |
           poetry run coverage run -m pytest
-      
-      # coveralls: skip on windows, it is broken: shouldn't be a big deal
-      - name: Coveralls  # code coverage
-        if: matrix.os != 'windows-latest'
-        uses: coverallsapp/github-action@v2
