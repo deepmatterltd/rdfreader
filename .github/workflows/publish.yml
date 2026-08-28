@@ -20,12 +20,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: "3.11"
+        python-version: "3.12"
 
     - name: Install Poetry
       uses: abatilo/actions-poetry@v4
       with:
-        poetry-version: "2.2.1"
+        poetry-version: "2.4.1"
 
     - name: Publish to PyPI
       run: |
